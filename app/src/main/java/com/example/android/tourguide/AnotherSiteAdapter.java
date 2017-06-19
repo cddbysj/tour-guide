@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
@@ -36,7 +37,7 @@ public class AnotherSiteAdapter extends ArrayAdapter<Site> {
             vh.tvName = (TextView) convertView.findViewById(R.id.text_name);
             vh.tvDescription = (TextView) convertView.findViewById(R.id.text_description);
             vh.tvAddress = (TextView) convertView.findViewById(R.id.text_address);
-            vh.tvTelephoneNumber = (TextView) convertView.findViewById(R.id.text_telephone_number);
+            vh.btnTelephoneNumber = (Button) convertView.findViewById(R.id.text_telephone_number);
             vh.tvOpeningTime = (TextView) convertView.findViewById(R.id.text_opening_time);
             //
             convertView.setTag(vh);
@@ -45,7 +46,7 @@ public class AnotherSiteAdapter extends ArrayAdapter<Site> {
         vh.tvName.setText(site.getName());
         vh.tvDescription.setText(site.getDescription());
         vh.tvAddress.setText(site.getAddress());
-        vh.tvTelephoneNumber.setText(site.getTelephoneNumber());
+        vh.btnTelephoneNumber.setText(site.getTelephoneNumber());
         vh.tvOpeningTime.setText(site.getOpeningTime());
         return convertView;
     }
@@ -54,7 +55,7 @@ public class AnotherSiteAdapter extends ArrayAdapter<Site> {
         TextView tvName;
         TextView tvDescription;
         TextView tvAddress;
-        TextView tvTelephoneNumber;
+        Button btnTelephoneNumber;
         TextView tvOpeningTime;
     }
 }

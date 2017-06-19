@@ -20,7 +20,8 @@
     <!-- Text view in launcher screen -->
     <style name="TextView">
         <item name="android:gravity">center</item>
-        <item name="android:textAppearance">?android:textAppearance</item>
+        <item name="android:layout_margin">@dimen/text_padding</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
     </style>
 
 </resources>
